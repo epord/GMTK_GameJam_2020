@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     public float TURBO_SPEED = 3.0f;
 
     public float speed;
+    public bool isDirectionBroken = false;
 
     public float angle = 0.0f; // in degrees
     public float angleSpeed = 1.0f; // degrees per frame
@@ -19,9 +20,11 @@ public class Movement : MonoBehaviour
         speed = NORMAL_SPEED;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        transform.rotation = Quaternion.Euler(0, 0, angle);
+        transform.Translate(Vector2.up * speed * Time.deltaTime);
+
         if (Input.GetButton("Left"))
         {
             angle = (angle + angleSpeed + 360) % 360;
@@ -33,15 +36,14 @@ public class Movement : MonoBehaviour
             angle = (angle - angleSpeed + 360) % 360;
         }
 
-        if (Input.GetButton("Turbo"))
+        if (Input.GetButtonDown("Turbo"))
         {
             speed = TURBO_SPEED;
-        } else
+        }
+
+        if (Input.GetButtonUp("Turbo"))
         {
             speed = NORMAL_SPEED;
         }
-
-        transform.rotation = Quaternion.Euler(0, 0, angle);
-        transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
 }
