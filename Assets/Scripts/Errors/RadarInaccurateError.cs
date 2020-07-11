@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RadarInaccurateError : MonoBehaviour
+public class RadarInaccurateError : Error
 {
-    public bool isActive = false;
     public float inaccuracy = 30.0f; // angle of inaccuracy
 
     private Radar radar;
@@ -14,14 +13,14 @@ public class RadarInaccurateError : MonoBehaviour
         radar = GetComponent<Radar>();
     }
 
-    void Update()
+    public override void OnActivate()
     {
-        if (isActive)
-        {
-            radar.inaccuracy = inaccuracy;
-        } else
-        {
-            radar.inaccuracy = 0.0f;
-        }
+        radar.inaccuracy = inaccuracy;
     }
+
+    public override void OnDeactivate()
+    {
+        radar.inaccuracy = 0.0f;
+    }
+
 }

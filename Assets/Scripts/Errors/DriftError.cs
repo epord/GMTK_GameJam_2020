@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DriftError : MonoBehaviour
+public class DriftError : Error
 {
-    public bool isActive = false;
     public float driftAmount = 2.0f;
 
     private Movement movement;
@@ -14,11 +13,8 @@ public class DriftError : MonoBehaviour
         movement = GetComponent<Movement>();    
     }
 
-    void Update()
+    public override void Apply()
     {
-        if (isActive)
-        {
-            movement.angle += Random.Range(-driftAmount, driftAmount);
-        }
+        movement.angle += Random.Range(-driftAmount, driftAmount);
     }
 }
