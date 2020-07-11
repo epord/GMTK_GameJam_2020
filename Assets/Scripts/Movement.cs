@@ -17,8 +17,23 @@ public class Movement : MonoBehaviour
     [HideInInspector]
     public float angle = 0.0f; // in degrees
 
+    private SpaceshipPlayer audioPlayer;
+
     void Start()
     {
+        audioPlayer = GetComponentInChildren<SpaceshipPlayer>();
+        speed = NORMAL_SPEED;
+    }
+
+    public void StartTurbo()
+    {
+        audioPlayer.StartTurbo();
+        speed = TURBO_SPEED;
+    }
+
+    public void StopTurbo()
+    {
+        audioPlayer.StopTurbo();
         speed = NORMAL_SPEED;
     }
 
@@ -40,12 +55,12 @@ public class Movement : MonoBehaviour
 
         if (Input.GetButtonDown("Turbo"))
         {
-            speed = TURBO_SPEED;
+            StartTurbo();
         }
 
         if (Input.GetButtonUp("Turbo"))
         {
-            speed = NORMAL_SPEED;
+            StopTurbo();
         }
     }
 }

@@ -19,9 +19,9 @@ public class TurboError : Error
     {
         while (true)
         {
-            movement.speed = movement.TURBO_SPEED;
+            movement.StartTurbo();
             yield return new WaitForSeconds(Random.Range(minTurboTime, maxTurboTime));
-            movement.speed = movement.NORMAL_SPEED;
+            movement.StopTurbo();
             yield return new WaitForSeconds(Random.Range(minTurboTime, maxTurboTime));
         }
     }
