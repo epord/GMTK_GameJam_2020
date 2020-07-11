@@ -18,11 +18,11 @@ public class BlasterGun : MonoBehaviour
     
     private IEnumerator Shoot()
     {
-        yield return new WaitForSeconds(delay);
         Vector3 target = Input.mousePosition;
         target.z = 0.0f;
         target = UnityEngine.Camera.main.ScreenToWorldPoint(target);
         target.z = 0.0f;
+        yield return new WaitForSeconds(delay);
         Shoot(target);
     }
 

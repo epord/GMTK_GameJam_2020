@@ -15,7 +15,7 @@ public class ChaseArea : MonoBehaviour
     {
         if (collider.tag == "Player")
         {
-            enemy.StartChasing(collider.gameObject);
+            enemy.InRange();
         }
     }
 
@@ -23,7 +23,7 @@ public class ChaseArea : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            enemy.StopChasing();
+            enemy.OutOfRange();
         }
     }
 }
