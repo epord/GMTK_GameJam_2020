@@ -47,6 +47,7 @@ public class BlasterGun : MonoBehaviour
         Vector3 laserPosition = firePoint.position;
         
         Laser laser = Instantiate(laserPrefab, laserPosition, laserRotation).GetComponent<Laser>();
+        Physics2D.IgnoreCollision(laser.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         laser.laserDirection = shootDirection;
         laser.speed = laserSpeed;
         laser.damage = laserDamage;
