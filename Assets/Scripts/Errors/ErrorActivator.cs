@@ -29,5 +29,25 @@ public class ErrorActivator : MonoBehaviour
         {
             errors[4].Toggle();
         }
+        if (Input.GetKeyDown("6"))
+        {
+            errors[5].Toggle();
+        }
+        if (Input.GetKeyDown("7"))
+        {
+            errors[6].Toggle();
+        }
+        if (Input.GetKeyDown("8"))
+        {
+            errors[7].Toggle();
+        }
+        if (Input.GetKeyDown("9"))
+        {
+            errors[8].Toggle();
+        }
+        if (Input.GetKeyDown("0"))
+        {
+            errors[9].Toggle();
+        }
     }
 }
