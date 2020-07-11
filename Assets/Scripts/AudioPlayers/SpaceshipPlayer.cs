@@ -6,6 +6,7 @@ public class SpaceshipPlayer : MonoBehaviour
 {
     public AudioSource turboLoop;
     public AudioSource turboFadeIn;
+    public AudioSource laserShoot;
 
     public float FADE_STEP = 0.07f;
     public float BASE_TURBO_LOOP_VOLUME = 0.2f;
@@ -51,8 +52,13 @@ public class SpaceshipPlayer : MonoBehaviour
 
     public void StopTurbo()
     {
-        Debug.Log("stop turbo");
         StopCoroutine(startTurboRoutine);
         StartCoroutine(StopTurboRoutine());
+    }
+
+    public void LaserShoot()
+    {
+        laserShoot.pitch = Random.Range(1.0f, 1.70f);
+        laserShoot.Play();
     }
 }
