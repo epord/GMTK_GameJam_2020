@@ -14,13 +14,11 @@ public class RadarOffError : Error
 
     public override void OnActivate()
     {
-        Debug.Log("Activate");
         radar.isActive = false;
     }
 
     public override void OnDeactivate()
     {
-        Debug.Log("Deactivate");
         radar.isActive = true;
     }
 }

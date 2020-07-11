@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 1803957656}
   - component: {fileID: 1803957655}
   - component: {fileID: 1803957654}
+  - component: {fileID: 7590865182121355284}
+  - component: {fileID: 8722328768351919216}
   m_Layer: 0
   m_Name: spaceship
   m_TagString: Untagged
@@ -104,9 +106,9 @@ MonoBehaviour:
   SLOW_SPEED: 0.1
   NORMAL_SPEED: 1
   TURBO_SPEED: 3
+  angleSpeed: 1
   speed: 0
   angle: 0
-  angleSpeed: 1
 --- !u!114 &1209938666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +126,8 @@ MonoBehaviour:
     type: 3}
   laserSpeed: 20
   laserDamage: 1
+  delay: 0
+  deviation: 0
 --- !u!114 &1803957663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,8 +143,8 @@ MonoBehaviour:
   targets: []
   activationTime: 3
   cooldown: 30
-  inaccuracy: 0
   isActive: 1
+  deviation: 0
 --- !u!114 &1803957658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +162,8 @@ MonoBehaviour:
   - {fileID: 1803957656}
   - {fileID: 1803957655}
   - {fileID: 1803957654}
+  - {fileID: 7590865182121355284}
+  - {fileID: 8722328768351919216}
 --- !u!114 &1803957657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
-  inaccuracy: 30
+  deviation: 30
 --- !u!114 &1803957654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,3 +220,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+--- !u!114 &7590865182121355284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060851191997956013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d7a9258d511484ca27337e363e44cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
+  deviation: 10
+--- !u!114 &8722328768351919216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060851191997956013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121d9e0bf40868344b7ba6bbd00cf8c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
+  delay: 2

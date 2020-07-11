@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RadarInaccurateError : Error
 {
-    public float inaccuracy = 30.0f; // angle of inaccuracy
+    public float deviation = 30.0f; // angle of inaccuracy
 
     private Radar radar;
 
@@ -15,12 +15,12 @@ public class RadarInaccurateError : Error
 
     public override void OnActivate()
     {
-        radar.inaccuracy = inaccuracy;
+        radar.deviation = deviation;
     }
 
     public override void OnDeactivate()
     {
-        radar.inaccuracy = 0.0f;
+        radar.deviation = 0.0f;
     }
 
 }

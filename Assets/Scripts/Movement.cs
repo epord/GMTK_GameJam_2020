@@ -9,10 +9,13 @@ public class Movement : MonoBehaviour
     public float NORMAL_SPEED = 1f;
     public float TURBO_SPEED = 3.0f;
 
+    public float angleSpeed = 1.0f; // degrees per frame
+
+    [HideInInspector]
     public float speed;
 
+    [HideInInspector]
     public float angle = 0.0f; // in degrees
-    public float angleSpeed = 1.0f; // degrees per frame
 
     void Start()
     {
