@@ -66,7 +66,9 @@ public class Radar : MonoBehaviour
                     if (target.TryGetComponent(out spriteRenderer))
                     {
                         GameObject targetIcon = new GameObject("TargetIcon");
-                        targetIcon.transform.position = hit.point - direction * spriteRenderer.size;
+                        Vector3 position = hit.point;
+                        position.z = -2;
+                        targetIcon.transform.position = position;
                         SpriteRenderer renderer = targetIcon.AddComponent<SpriteRenderer>();
                         renderer.sprite = spriteRenderer.sprite;
                         renderer.material.color = new Color(
@@ -75,6 +77,7 @@ public class Radar : MonoBehaviour
                             renderer.material.color.b,
                             0.5f
                         );
+                        targetIcon.transform.localScale = new Vector3(0.03f, 0.03f, 0.03f);
 
                         targetIcons.Add(targetIcon);
                     }
