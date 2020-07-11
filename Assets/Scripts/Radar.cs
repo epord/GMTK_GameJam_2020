@@ -47,7 +47,7 @@ public class Radar : MonoBehaviour
             Vector2 direction = target.transform.position - transform.position;
             direction.Normalize();
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction);
-            if (hit != null)
+            if (hit.collider != null)
             {
                 if (Vector2.Distance(transform.position, target.transform.position) > hit.distance)
                 {
