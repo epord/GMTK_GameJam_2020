@@ -6,6 +6,13 @@ public class ErrorActivator : MonoBehaviour
 {
     public Error[] errors;
 
+    public void FixAll()
+    {
+        foreach (Error error in errors)
+        {
+            error.Deactivate();
+        }
+    }
 
     void Update()
     {
