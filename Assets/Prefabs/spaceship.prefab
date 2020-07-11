@@ -11,8 +11,13 @@ GameObject:
   - component: {fileID: 2060851191997956008}
   - component: {fileID: 2060851191997956015}
   - component: {fileID: 2060851191997956014}
-  - component: {fileID: 2060851191997956010}
-  - component: {fileID: 2060851191997956009}
+  - component: {fileID: 1209938666}
+  - component: {fileID: 1803957663}
+  - component: {fileID: 1803957658}
+  - component: {fileID: 1803957657}
+  - component: {fileID: 1803957656}
+  - component: {fileID: 1803957655}
+  - component: {fileID: 1803957654}
   m_Layer: 0
   m_Name: spaceship
   m_TagString: Untagged
@@ -100,10 +105,9 @@ MonoBehaviour:
   NORMAL_SPEED: 1
   TURBO_SPEED: 3
   speed: 0
-  isDirectionBroken: 0
   angle: 0
   angleSpeed: 1
---- !u!114 &2060851191997956010
+--- !u!114 &1209938666
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,12 +116,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 2060851191997956013}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ab5b620d430ec4698476011057be54, type: 3}
+  m_Script: {fileID: 11500000, guid: 31412635aa0012d4291dce71961ba957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActive: 0
-  driftAmount: 2
---- !u!114 &2060851191997956009
+  firePoint: {fileID: 2060851191997956008}
+  laserPrefab: {fileID: 1091207309632196946, guid: faa76c124faa48143948cd91bf0a8f01,
+    type: 3}
+  laserSpeed: 20
+  laserDamage: 1
+--- !u!114 &1803957663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060851191997956013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3004e30a6a3064583e9a53ba0a1a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets: []
+  activationTime: 3
+  cooldown: 30
+  inaccuracy: 0
+  isActive: 1
+--- !u!114 &1803957658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060851191997956013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 943f5978fa498b94fb86d9d093a951ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  errors:
+  - {fileID: 1803957657}
+  - {fileID: 1803957656}
+  - {fileID: 1803957655}
+  - {fileID: 1803957654}
+--- !u!114 &1803957657
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,3 +173,44 @@ MonoBehaviour:
   isActive: 0
   minTurboTime: 0.5
   maxTurboTime: 2
+--- !u!114 &1803957656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060851191997956013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ab5b620d430ec4698476011057be54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
+  driftAmount: 2
+--- !u!114 &1803957655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060851191997956013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f361858fa70369d43880218332424740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
+  inaccuracy: 30
+--- !u!114 &1803957654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060851191997956013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b093793ad986e364b93dfe45023139aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
