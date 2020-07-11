@@ -127,29 +127,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2060851193204460868}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1209938666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1209938665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31412635aa0012d4291dce71961ba957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 1209938668}
-  laserPrefab: {fileID: 1091207309632196946, guid: faa76c124faa48143948cd91bf0a8f01,
-    type: 3}
-  laserSpeed: 20
-  laserDamage: 1
---- !u!4 &1209938668 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2060851191997956008, guid: 9862d215d4c310c43bde9f51d86da9bc,
-    type: 3}
-  m_PrefabInstance: {fileID: 2060851193204460868}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2094759195
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,6 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1209938665}
+  cam: {fileID: 0}
 --- !u!1001 &2060851193204460868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -309,20 +287,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2060851191997956009, guid: 9862d215d4c310c43bde9f51d86da9bc,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2060851191997956013, guid: 9862d215d4c310c43bde9f51d86da9bc,
         type: 3}
       propertyPath: m_Name
       value: Spaceship
-      objectReference: {fileID: 0}
-    - target: {fileID: 2060851191997956013, guid: 9862d215d4c310c43bde9f51d86da9bc,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9862d215d4c310c43bde9f51d86da9bc, type: 3}
@@ -393,11 +361,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid
       objectReference: {fileID: 0}
-    - target: {fileID: 5328126936619687503, guid: 26b0fe3072fc9eb45aff5b923e96b4e3,
-        type: 3}
-      propertyPath: deathEffect
-      value: 
-      objectReference: {fileID: 6804278827846748458, guid: 423fb8c7492ed3c439688868761d6aa1,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26b0fe3072fc9eb45aff5b923e96b4e3, type: 3}

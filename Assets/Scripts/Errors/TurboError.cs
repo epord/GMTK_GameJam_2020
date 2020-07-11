@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurboError : MonoBehaviour
+public class TurboError : Error
 {
-    public bool isActive = false;
-
     public float minTurboTime = 0.5f;
     public float maxTurboTime = 2.0f;
 
     private Movement movement;
     private IEnumerator coroutine;
-    private bool isCoroutineRunning = false;
 
     void Start()
     {
@@ -29,20 +26,14 @@ public class TurboError : MonoBehaviour
         }
     }
 
-    void Update()
+    public override void OnActivate()
     {
-        if (isActive)
-        {
-            if (!isCoroutineRunning)
-            {
-                isCoroutineRunning = true;
-                coroutine = DeactivateError();
-                StartCoroutine(coroutine);
-            } 
-        } else
-        {
-            if (coroutine != null) StopCoroutine(coroutine);
-        }
-        
+        coroutine = DeactivateError();
+        StartCoroutine(coroutine);
+    }
+
+    public override void OnDeactivate()
+    {
+        if (coroutine != null) StopCoroutine(coroutine);
     }
 }

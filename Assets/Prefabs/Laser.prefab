@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1091207309632196908}
   - component: {fileID: 1091207309632196909}
   - component: {fileID: 1215678144}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,6 +146,7 @@ MonoBehaviour:
   rb: {fileID: 1091207309632196908}
   impactEffect: {fileID: 351156740761262272, guid: 027d28692188dcd42a828af54e0b964d,
     type: 3}
+  TimeUntilDisapear: 5
   laserDirection: {x: 0, y: 0, z: 0}
   speed: 1
   damage: 0
