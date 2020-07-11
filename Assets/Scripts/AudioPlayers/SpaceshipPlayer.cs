@@ -10,6 +10,7 @@ public class SpaceshipPlayer : MonoBehaviour
 
     public float FADE_STEP = 0.07f;
     public float BASE_TURBO_LOOP_VOLUME = 0.2f;
+    public float FAST_TURBO_LOOP_VOLUME = 0.8f;
     public float TURBO_FADE_IN_VOLUME = 0.8f;
 
     private IEnumerator startTurboRoutine;
@@ -26,7 +27,7 @@ public class SpaceshipPlayer : MonoBehaviour
     {
         turboFadeIn.Play();
         turboLoop.Play();
-        while (turboLoop.volume < 1.0f)
+        while (turboLoop.volume < FAST_TURBO_LOOP_VOLUME)
         {
             yield return new WaitForSeconds(0.1f);
             turboLoop.volume += FADE_STEP;

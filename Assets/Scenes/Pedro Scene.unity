@@ -222,22 +222,28 @@ PrefabInstance:
     - target: {fileID: 4563116780891288033, guid: 9bc6d1115c29e254a974426c06a4ac57,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 20.837107
+      value: 5.7685447
       objectReference: {fileID: 0}
     - target: {fileID: 4563116780891288033, guid: 9bc6d1115c29e254a974426c06a4ac57,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 20.837107
+      value: 5.7685447
       objectReference: {fileID: 0}
     - target: {fileID: 4563116780891288033, guid: 9bc6d1115c29e254a974426c06a4ac57,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 20.837107
+      value: 5.7685447
       objectReference: {fileID: 0}
+    - target: {fileID: 4563116780891288034, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a8b6b403831e3cf4d91ca70b79778f60,
+        type: 3}
     - target: {fileID: 4563116780891288037, guid: 9bc6d1115c29e254a974426c06a4ac57,
         type: 3}
       propertyPath: m_Name
-      value: Planet (2)
+      value: Sun
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc6d1115c29e254a974426c06a4ac57, type: 3}
@@ -297,7 +303,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c2ff52c8e3e58144f80a56619cc0262d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e63b623399390a46b3cd6b921efd33f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -498,10 +504,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4563116780891288033, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563116780891288033, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563116780891288033, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563116780891288034, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a089032e2a3218745958a5692384fa3f,
+        type: 3}
     - target: {fileID: 4563116780891288037, guid: 9bc6d1115c29e254a974426c06a4ac57,
         type: 3}
       propertyPath: m_Name
-      value: Planet (1)
+      value: Mercury
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc6d1115c29e254a974426c06a4ac57, type: 3}
@@ -850,10 +877,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4563116780891288033, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563116780891288033, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563116780891288033, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563116780891288034, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 481ea7b813a6b2b4a86140d5f3307b3a,
+        type: 3}
     - target: {fileID: 4563116780891288037, guid: 9bc6d1115c29e254a974426c06a4ac57,
         type: 3}
       propertyPath: m_Name
-      value: Planet
+      value: Venus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc6d1115c29e254a974426c06a4ac57, type: 3}
