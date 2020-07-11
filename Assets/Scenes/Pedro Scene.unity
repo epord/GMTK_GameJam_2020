@@ -431,6 +431,8 @@ MonoBehaviour:
   - {fileID: 899968756}
   - {fileID: 1644195415}
   - {fileID: 323821735}
+  activationTime: 3
+  cooldown: 30
 --- !u!1 &1644195415
 GameObject:
   m_ObjectHideFlags: 0
