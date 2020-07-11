@@ -213,6 +213,8 @@ MonoBehaviour:
   - {fileID: 1803957654}
   - {fileID: 7590865182121355284}
   - {fileID: 8722328768351919216}
+  minTimeToBreak: 5
+  maxTimeToBreak: 20
 --- !u!114 &1803957657
 MonoBehaviour:
   m_ObjectHideFlags: 0

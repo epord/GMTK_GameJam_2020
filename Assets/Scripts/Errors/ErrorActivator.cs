@@ -5,6 +5,13 @@ using UnityEngine;
 public class ErrorActivator : MonoBehaviour
 {
     public Error[] errors;
+    public float minTimeToBreak = 5.0f;
+    public float maxTimeToBreak = 20.0f;
+
+    private void Start()
+    {
+        StartCoroutine(RandomBreak());
+    }
 
     public void FixAll()
     {
@@ -14,8 +21,20 @@ public class ErrorActivator : MonoBehaviour
         }
     }
 
+    private IEnumerator RandomBreak()
+    {
+        while (true)
+        {
+            float wait = Random.Range(minTimeToBreak, maxTimeToBreak);
+            yield return new WaitForSeconds(wait);
+            int idx = Random.Range(0, errors.Length);
+            errors[idx].Activate();
+        }
+    }
+
     void Update()
     {
+
         if (Input.GetKeyDown("1"))
         {
             errors[0].Toggle();
