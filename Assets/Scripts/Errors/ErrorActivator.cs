@@ -5,10 +5,48 @@ using UnityEngine;
 public class ErrorActivator : MonoBehaviour
 {
     public Error[] errors;
+    public float minTimeToBreak = 5.0f;
+    public float maxTimeToBreak = 20.0f;
+    private void Start()
+    {
+        StartCoroutine(RandomBreak());
+    }
 
+    public void FixAll()
+    {
+        foreach (Error error in errors)
+        {
+            error.Deactivate();
+        }
+    }
+
+    private IEnumerator RandomBreak()
+    {
+
+        while (true)
+        {
+            float wait = Random.Range(minTimeToBreak, maxTimeToBreak);
+            yield return new WaitForSeconds(wait);
+
+            List<Error> unactiveErrors = new List<Error>();
+            foreach (Error error in errors)
+            {
+                if (!error.isActive) unactiveErrors.Add(error);
+            }
+
+            int idx = Random.Range(0, unactiveErrors.Count);
+            if (idx < unactiveErrors.Count)
+            {
+                unactiveErrors[idx].Activate();
+                Debug.Log("Activating " + unactiveErrors[idx].GetType());
+            }
+
+        }
+    }
 
     void Update()
     {
+
         if (Input.GetKeyDown("1"))
         {
             errors[0].Toggle();

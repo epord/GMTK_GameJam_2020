@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Error : MonoBehaviour
 {
+    [HideInInspector]
     public bool isActive = false;
 
     public void Toggle()

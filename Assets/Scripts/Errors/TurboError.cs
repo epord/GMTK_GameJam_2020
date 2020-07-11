@@ -35,5 +35,6 @@ public class TurboError : Error
     public override void OnDeactivate()
     {
         if (coroutine != null) StopCoroutine(coroutine);
+        movement.speed = movement.NORMAL_SPEED;
     }
 }

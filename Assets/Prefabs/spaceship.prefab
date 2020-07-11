@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 6276197131202655666}
   m_Layer: 0
   m_Name: spaceship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,6 +115,8 @@ MonoBehaviour:
   - {fileID: 1803957654}
   - {fileID: 7590865182121355284}
   - {fileID: 8722328768351919216}
+  minTimeToBreak: 5
+  maxTimeToBreak: 20
 --- !u!114 &1803957657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
-  driftAmount: 2
+  minDriftAmount: 0.2
+  maxDriftAmount: 1
 --- !u!114 &1803957655
 MonoBehaviour:
   m_ObjectHideFlags: 0
