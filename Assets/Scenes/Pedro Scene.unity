@@ -297,6 +297,8 @@ GameObject:
   - component: {fileID: 1209938670}
   - component: {fileID: 1209938669}
   - component: {fileID: 1209938671}
+  - component: {fileID: 1209938672}
+  - component: {fileID: 1209938673}
   m_Layer: 0
   m_Name: red
   m_TagString: Untagged
@@ -433,6 +435,35 @@ MonoBehaviour:
   - {fileID: 323821735}
   activationTime: 3
   cooldown: 30
+  inaccuracy: 5
+  isActive: 1
+--- !u!114 &1209938672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209938665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f361858fa70369d43880218332424740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
+  inaccuracy: 30
+--- !u!114 &1209938673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209938665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b093793ad986e364b93dfe45023139aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
 --- !u!1 &1644195415
 GameObject:
   m_ObjectHideFlags: 0
