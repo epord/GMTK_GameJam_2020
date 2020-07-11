@@ -10,7 +10,6 @@ public class Movement : MonoBehaviour
     public float TURBO_SPEED = 3.0f;
 
     public float speed;
-    public bool isDirectionBroken = false;
 
     public float angle = 0.0f; // in degrees
     public float angleSpeed = 1.0f; // degrees per frame
