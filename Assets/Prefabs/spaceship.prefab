@@ -243,7 +243,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
-  driftAmount: 2
+  minDriftAmount: 0.2
+  maxDriftAmount: 1
 --- !u!114 &1803957655
 MonoBehaviour:
   m_ObjectHideFlags: 0
