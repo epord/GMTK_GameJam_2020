@@ -4,10 +4,21 @@ using UnityEngine;
 
 public class Planet : MonoBehaviour
 {
-    public Shader visitedShader;
+    public SpriteRenderer unvisitedSprite;
+    public SpriteRenderer visitedSprite;
 
-    //[HideInInspector]
+    private AudioSource repairSound;
+
+    [HideInInspector]
     public bool isVisited = false;
+
+    private void Start()
+    {
+        repairSound = GetComponent<AudioSource>();
+
+        unvisitedSprite.enabled = true;
+        visitedSprite.enabled = false;
+    }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -19,8 +30,9 @@ public class Planet : MonoBehaviour
                 errorActivator.FixAll();
                 isVisited = true;
                 SpriteRenderer renderer = GetComponent<SpriteRenderer>();
-                renderer.material.shader = visitedShader;
-
+                unvisitedSprite.enabled = false;
+                visitedSprite.enabled = true;
+                repairSound.Play();
             }
         }
     }
