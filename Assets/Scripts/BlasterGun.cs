@@ -28,8 +28,7 @@ public class BlasterGun : MonoBehaviour
         target.z = 0.0f;
         target = UnityEngine.Camera.main.ScreenToWorldPoint(target);
         target.z = 0.0f;
-        yield return new WaitForSeconds(delay);
-        Shoot(target);
+        return Shoot(target);
     }
 
     // Update is called once per frame
@@ -41,7 +40,7 @@ public class BlasterGun : MonoBehaviour
         }
     }
     
-    void Shoot(Vector3 target)
+    IEnumerator Shoot(Vector3 target)
     {
         Vector3 shootDirection = target - firePoint.position;
         float driftAngle = Mathf.Cos(Time.time * 10.0f) * deviation * 2.0f * Mathf.PI / 360.0f;
@@ -51,6 +50,8 @@ public class BlasterGun : MonoBehaviour
 
         Quaternion laserRotation = Quaternion.FromToRotation(Vector3.up, shootDirection);
         Vector3 laserPosition = firePoint.position;
+        
+        yield return new WaitForSeconds(delay);
         
         Laser laser = Instantiate(laserPrefab, laserPosition, laserRotation).GetComponent<Laser>();
         Physics2D.IgnoreCollision(laser.GetComponent<Collider2D>(), GetComponent<Collider2D>());
