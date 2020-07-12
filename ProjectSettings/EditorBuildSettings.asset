@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menus/FirstMenu.unity
+    guid: 86a173d204c02d640a43dea76bcbbf92
+  - enabled: 1
+    path: Assets/Scenes/Menus/Historia.unity
+    guid: 4c867a99e9ad08544bf562e10006bd10
+  - enabled: 1
+    path: Assets/Scenes/Menus/Instrucciones.unity
+    guid: 010d83a386b3efa4a8f3f5cfde249f03
+  - enabled: 1
     path: Assets/Scenes/Pedro Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
