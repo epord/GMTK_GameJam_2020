@@ -14,8 +14,10 @@ public class BlasterGun : MonoBehaviour
 
     public float delay = 0.0f; // seconds to shoot after click
     public float deviation = 0.0f; // in degrees
+    public float cooldown = 0.5f; // in seconds
 
     private SpaceshipPlayer audioPlayer;
+    private bool canShoot = true;
 
     void Start()
     {
@@ -24,6 +26,7 @@ public class BlasterGun : MonoBehaviour
 
     private IEnumerator Shoot()
     {
+        canShoot = false;
         Vector3 target = Input.mousePosition;
         target.z = 0.0f;
         target = UnityEngine.Camera.main.ScreenToWorldPoint(target);
@@ -31,11 +34,18 @@ public class BlasterGun : MonoBehaviour
         return Shoot(target);
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator Cooldown()
     {
-        if (Input.GetMouseButtonDown(1))
+        yield return new WaitForSeconds(cooldown);
+        canShoot = true;
+    }
+
+        // Update is called once per frame
+        void Update()
+    {
+        if (canShoot && Input.GetMouseButtonDown(1))
         {
+            StartCoroutine(Cooldown());
             StartCoroutine(Shoot());
         }
     }
