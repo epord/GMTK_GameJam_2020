@@ -94,6 +94,5 @@ public class Enemy : MonoBehaviour
         laser.laserDirection = shootDirection;
         laser.speed = laserSpeed;
         laser.damage = laserDamage;
-        laser.layer = 
     }
 }
