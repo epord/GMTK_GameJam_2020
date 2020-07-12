@@ -44,7 +44,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: d1a6bc8a96dc0c74d99fc4bbfe583863, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.641
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -223,3 +223,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4cb56c0902fca4c99584607e93a66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
