@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class EnemyDeadAnimation : MonoBehaviour
 {
     private Material material;
+    private SpriteRenderer sr;
 
     private float fade = 1.0f;
     private float dissolveSpeed = 1.0f;
@@ -17,7 +18,7 @@ public class EnemyDeadAnimation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        material = GetComponent<SpriteRenderer>().material;        
+        sr = GetComponent<SpriteRenderer>();        
     }
 
     
@@ -37,7 +38,10 @@ public class EnemyDeadAnimation : MonoBehaviour
             }
             fade -= Time.unscaledDeltaTime * dissolveSpeed;
         }
-        material.SetFloat("_Fade", fade);
+        Color color = sr.color;
+        color.a = fade;
+        sr.color = color;
+        //material.SetFloat("_Fade", fade);
         if (fade <= 0)
         {
             if (!isPlayer)
