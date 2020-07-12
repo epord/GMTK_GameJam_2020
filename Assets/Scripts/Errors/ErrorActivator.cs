@@ -30,6 +30,8 @@ public class ErrorActivator : MonoBehaviour
         {
             error.Deactivate();
         }
+      
+        gameObject.GetComponent<MaterialTintColor>().isColorActive = false;
     }
 
     public void Lose()
@@ -67,6 +69,11 @@ public class ErrorActivator : MonoBehaviour
             }
             else
             {
+                if (unactiveErrors.Count <= 4)
+                {
+                    gameObject.GetComponent<MaterialTintColor>().isColorActive = true;
+                }
+                
                 PartDestroyedByLaser.Play();
                 int idx = Random.Range(0, unactiveErrors.Count);
                 if (idx < unactiveErrors.Count)
@@ -101,6 +108,10 @@ public class ErrorActivator : MonoBehaviour
             {
                 unactiveErrors[idx].Activate();
                 Debug.Log("Activating " + unactiveErrors[idx].GetType());
+            }
+            if (unactiveErrors.Count <= 4)
+            {
+                gameObject.GetComponent<MaterialTintColor>().isColorActive = true;
             }
 
         }
