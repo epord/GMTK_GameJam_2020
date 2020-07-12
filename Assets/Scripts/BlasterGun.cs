@@ -49,10 +49,10 @@ public class BlasterGun : MonoBehaviour
         shootDirection.Normalize();
 
         Quaternion laserRotation = Quaternion.FromToRotation(Vector3.up, shootDirection);
-        Vector3 laserPosition = firePoint.position;
+       
         
         yield return new WaitForSeconds(delay);
-        
+        Vector3 laserPosition = firePoint.position;
         Laser laser = Instantiate(laserPrefab, laserPosition, laserRotation).GetComponent<Laser>();
         Physics2D.IgnoreCollision(laser.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         laser.laserDirection = shootDirection;

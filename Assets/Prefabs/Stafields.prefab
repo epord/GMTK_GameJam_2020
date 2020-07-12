@@ -49,6 +49,16 @@ PrefabInstance:
       propertyPath: MaxStars
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 6164843901728072808, guid: de80732101ead08409d09a34f1437059,
+        type: 3}
+      propertyPath: FieldWidth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164843901728072808, guid: de80732101ead08409d09a34f1437059,
+        type: 3}
+      propertyPath: FieldHeight
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6164843901728072812, guid: de80732101ead08409d09a34f1437059,
         type: 3}
       propertyPath: m_Name
@@ -143,6 +153,16 @@ PrefabInstance:
         type: 3}
       propertyPath: ParallaxFactor
       value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164843901728072808, guid: de80732101ead08409d09a34f1437059,
+        type: 3}
+      propertyPath: FieldWidth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164843901728072808, guid: de80732101ead08409d09a34f1437059,
+        type: 3}
+      propertyPath: FieldHeight
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6164843901728072812, guid: de80732101ead08409d09a34f1437059,
         type: 3}
@@ -239,6 +259,16 @@ PrefabInstance:
       propertyPath: ParallaxFactor
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 6164843901728072808, guid: de80732101ead08409d09a34f1437059,
+        type: 3}
+      propertyPath: FieldWidth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164843901728072808, guid: de80732101ead08409d09a34f1437059,
+        type: 3}
+      propertyPath: FieldHeight
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6164843901728072812, guid: de80732101ead08409d09a34f1437059,
         type: 3}
       propertyPath: m_Name
@@ -333,6 +363,16 @@ PrefabInstance:
         type: 3}
       propertyPath: ParallaxFactor
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164843901728072808, guid: de80732101ead08409d09a34f1437059,
+        type: 3}
+      propertyPath: FieldWidth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164843901728072808, guid: de80732101ead08409d09a34f1437059,
+        type: 3}
+      propertyPath: FieldHeight
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6164843901728072812, guid: de80732101ead08409d09a34f1437059,
         type: 3}
@@ -429,10 +469,25 @@ PrefabInstance:
       propertyPath: ParallaxFactor
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 6164843901728072808, guid: de80732101ead08409d09a34f1437059,
+        type: 3}
+      propertyPath: FieldWidth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164843901728072808, guid: de80732101ead08409d09a34f1437059,
+        type: 3}
+      propertyPath: FieldHeight
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6164843901728072812, guid: de80732101ead08409d09a34f1437059,
         type: 3}
       propertyPath: m_Name
       value: Starfield (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164843901728072814, guid: de80732101ead08409d09a34f1437059,
+        type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6164843901728072815, guid: de80732101ead08409d09a34f1437059,
         type: 3}
@@ -523,6 +578,16 @@ PrefabInstance:
         type: 3}
       propertyPath: ParallaxFactor
       value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164843901728072808, guid: de80732101ead08409d09a34f1437059,
+        type: 3}
+      propertyPath: FieldWidth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164843901728072808, guid: de80732101ead08409d09a34f1437059,
+        type: 3}
+      propertyPath: FieldHeight
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6164843901728072812, guid: de80732101ead08409d09a34f1437059,
         type: 3}
@@ -618,6 +683,16 @@ PrefabInstance:
         type: 3}
       propertyPath: ParallaxFactor
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164843901728072808, guid: de80732101ead08409d09a34f1437059,
+        type: 3}
+      propertyPath: FieldWidth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164843901728072808, guid: de80732101ead08409d09a34f1437059,
+        type: 3}
+      propertyPath: FieldHeight
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6164843901728072812, guid: de80732101ead08409d09a34f1437059,
         type: 3}

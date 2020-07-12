@@ -33,6 +33,11 @@ public class Laser : MonoBehaviour
         {
             destroyable.TakeHit(damage);
         }
+        ErrorActivator playerError = hitInfo.GetComponent<ErrorActivator>();
+        if (playerError != null)
+        {
+            playerError.TakeHit(damage);
+        }
         Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }
