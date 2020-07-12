@@ -176,7 +176,7 @@ MonoBehaviour:
     type: 3}
   laserSpeed: 10
   laserDamage: 1
-  speed: 4
+  speed: 5
   deviation: 10
   DeviationChance: 0.5
   minReloadTime: 0.4

@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dc43344085c96a43a407c15837b7303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 1
+  HP: 2
   deathEffect: {fileID: 7401911020556536303, guid: e6f81c7eef343584c8a14c141c45532b,
     type: 3}
 --- !u!114 &2942013878635672078
@@ -116,7 +116,7 @@ MonoBehaviour:
     type: 3}
   laserSpeed: 10
   laserDamage: 1
-  speed: 2
+  speed: 3
   deviation: 10
   DeviationChance: 0.5
   minReloadTime: 1

@@ -14,12 +14,17 @@ public class Planet : MonoBehaviour
 
     public GameObject planetText;
 
+    public GameObject enemyManager;
+    
+
     private void Start()
     {
         repairSound = GetComponent<AudioSource>();
 
         unvisitedSprite.enabled = true;
         visitedSprite.enabled = false;
+        
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -35,6 +40,11 @@ public class Planet : MonoBehaviour
                 unvisitedSprite.enabled = false;
                 visitedSprite.enabled = true;
                 repairSound.Play();
+                EnemyCreator enemyCreator = enemyManager.GetComponent<EnemyCreator>();
+                enemyCreator.enemyDelayMin -= 0.2f;
+                enemyCreator.enemyDelayMax -= 0.2f;
+                if (enemyCreator.enemyDelayMin <= 0) enemyCreator.enemyDelayMin = 0;
+                if (enemyCreator.enemyDelayMax <= 0) enemyCreator.enemyDelayMax = 0;
                 StartCoroutine(AddPlanetText());
             }
         }
