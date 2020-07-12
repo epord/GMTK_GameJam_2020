@@ -12,7 +12,7 @@ public class Planet : MonoBehaviour
 
     public bool isVisited = false;
 
-    public SpriteRenderer planetText;
+    public GameObject planetText;
 
     private void Start()
     {
@@ -42,8 +42,8 @@ public class Planet : MonoBehaviour
 
     private IEnumerator AddPlanetText()
     {
-        planetText.enabled = true;
+        planetText.GetComponent<SpriteRenderer>().enabled = true;
         yield return new WaitForSeconds(10f);
-        planetText.enabled = false;
+        planetText.GetComponent<SpriteRenderer>().enabled = false;
     }
 }
