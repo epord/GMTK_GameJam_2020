@@ -45,6 +45,8 @@ public class Planet : MonoBehaviour
                 enemyCreator.enemyDelayMax -= 0.2f;
                 if (enemyCreator.enemyDelayMin <= 0) enemyCreator.enemyDelayMin = 0;
                 if (enemyCreator.enemyDelayMax <= 0) enemyCreator.enemyDelayMax = 0;
+                enemyCreator.Enemies[0].spawnProbability -= 0.05f;
+                enemyCreator.Enemies[1].spawnProbability += 0.05f;
                 StartCoroutine(AddPlanetText());
             }
         }
