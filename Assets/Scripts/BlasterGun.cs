@@ -15,7 +15,13 @@ public class BlasterGun : MonoBehaviour
     public float delay = 0.0f; // seconds to shoot after click
     public float deviation = 0.0f; // in degrees
 
-    
+    private SpaceshipPlayer audioPlayer;
+
+    void Start()
+    {
+        audioPlayer = GetComponentInChildren<SpaceshipPlayer>();
+    }
+
     private IEnumerator Shoot()
     {
         Vector3 target = Input.mousePosition;
@@ -51,5 +57,7 @@ public class BlasterGun : MonoBehaviour
         laser.laserDirection = shootDirection;
         laser.speed = laserSpeed;
         laser.damage = laserDamage;
+
+        audioPlayer.LaserShoot();
     }
 }
