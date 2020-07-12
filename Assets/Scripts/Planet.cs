@@ -6,10 +6,10 @@ public class Planet : MonoBehaviour
 {
     public SpriteRenderer unvisitedSprite;
     public SpriteRenderer visitedSprite;
+    public SpriteRenderer icon;
 
     private AudioSource repairSound;
 
-    //[HideInInspector]
     public bool isVisited = false;
 
     public SpriteRenderer planetText;

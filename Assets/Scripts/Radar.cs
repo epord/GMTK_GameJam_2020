@@ -62,25 +62,21 @@ public class Radar : MonoBehaviour
                 if (Vector2.Distance(transform.position, target.transform.position) > hit.distance)
                 {
                     Debug.DrawLine(hit.point, transform.position, Color.green);
-                    SpriteRenderer spriteRenderer;
-                    if (target.TryGetComponent(out spriteRenderer))
-                    {
-                        GameObject targetIcon = new GameObject("TargetIcon");
-                        Vector3 position = hit.point;
-                        position.z = -2;
-                        targetIcon.transform.position = position;
-                        SpriteRenderer renderer = targetIcon.AddComponent<SpriteRenderer>();
-                        renderer.sprite = spriteRenderer.sprite;
-                        renderer.material.color = new Color(
-                            renderer.material.color.r,
-                            renderer.material.color.g,
-                            renderer.material.color.b,
-                            0.5f
-                        );
-                        targetIcon.transform.localScale = new Vector3(0.03f, 0.03f, 0.03f);
+                    SpriteRenderer spriteRenderer = target.icon;
+                    GameObject targetIcon = new GameObject("TargetIcon");
+                    Vector3 position = hit.point;
+                    position.z = -2;
+                    targetIcon.transform.position = position;
+                    SpriteRenderer renderer = target.icon;// targetIcon.AddComponent<SpriteRenderer>();
+                    //renderer.sprite = spriteRenderer.sprite;
+                    renderer.material.color = new Color(
+                        renderer.material.color.r,
+                        renderer.material.color.g,
+                        renderer.material.color.b,
+                        0.5f
+                    );
 
-                        targetIcons.Add(targetIcon);
-                    }
+                    targetIcons.Add(targetIcon);
                 }
             }
         }
