@@ -93,7 +93,7 @@ public class Radar : MonoBehaviour
                     );
                     arrowIcon.transform.rotation = Quaternion.Euler(new Vector3(0, 0, rotation));
                     arrowIcon.transform.position = hit.point;
-                    arrowIcon.transform.localScale = new Vector3(1, 1, 1) * scale;
+                    arrowIcon.transform.localScale = new Vector3(1, 1, 1) * 0.1f;
 
                     SpriteRenderer sr2 = arrowIcon.AddComponent<SpriteRenderer>();
                     sr2.sprite = arrow.sprite;
