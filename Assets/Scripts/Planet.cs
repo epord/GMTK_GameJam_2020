@@ -9,7 +9,7 @@ public class Planet : MonoBehaviour
 
     private AudioSource repairSound;
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool isVisited = false;
 
     private void Start()

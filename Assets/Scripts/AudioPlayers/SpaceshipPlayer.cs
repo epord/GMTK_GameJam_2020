@@ -12,6 +12,7 @@ public class SpaceshipPlayer : MonoBehaviour
     public float BASE_TURBO_LOOP_VOLUME = 0.2f;
     public float FAST_TURBO_LOOP_VOLUME = 0.8f;
     public float TURBO_FADE_IN_VOLUME = 0.8f;
+    public float DELAY_VOICES = 6.0f;
 
     private IEnumerator startTurboRoutine;
     private ErrorActivator errorActivator;
@@ -87,7 +88,7 @@ public class SpaceshipPlayer : MonoBehaviour
                     voices.AddRange(error.voiceErrors);
                 }
             }
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(DELAY_VOICES);
         }
     }
 
@@ -101,7 +102,7 @@ public class SpaceshipPlayer : MonoBehaviour
                 voices[i].Play();
             }
             i = Random.Range(0, voices.Count);
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(DELAY_VOICES);
         }
     }
 
