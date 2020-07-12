@@ -2449,9 +2449,15 @@ MonoBehaviour:
   minTimeToBreak: 5
   maxTimeToBreak: 5
   newErrorMaxHP: 5
+  PlayerDead: {fileID: 8309461748909224260, guid: 370485eb44f329f4c87c51e8b3fca46f,
+    type: 3}
   PartDestroyedByLaser: {fileID: 1448581107}
   HitByLaser: {fileID: 1365406252}
   GameOver: {fileID: 257243127}
+  motorDamageLevel: 0
+  driveDamageLevel: 0
+  radarDamageLevel: 0
+  blasterDamageLevel: 0
 --- !u!114 &1803957657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6428,7 +6434,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8011805100724452269}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

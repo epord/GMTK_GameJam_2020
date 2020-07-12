@@ -84,18 +84,14 @@ public class ErrorActivator : MonoBehaviour
     {
         GameOver.Play();
         Debug.Log("YOU LOSE");
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
         gameOver = true;
-        StartCoroutine(RestartGame());
-        Instantiate(PlayerDead, transform.position, transform.rotation);        
-        Destroy(gameObject);
+       
+        gameObject.SetActive(false);
+        Instantiate(PlayerDead, transform.position, transform.rotation);
     }
 
-    private IEnumerator RestartGame()
-    {
-        yield return new  WaitForSecondsRealtime(5.0f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+   
 
     public void TakeHit(int damage)
     {
