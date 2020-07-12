@@ -66,7 +66,7 @@ public class Radar : MonoBehaviour
                     Debug.DrawLine(hit.point, transform.position, Color.green);
 
                     float distance = Vector2.Distance(transform.position, target.transform.position);
-                    float scale = 0.2f - distance / 350.0f * 0.18f;
+                    float scale = 0.2f - distance / 350.0f * 0.15f;
 
                     // Add icon
                     GameObject targetIcon = new GameObject("TargetIcon");
