@@ -12,6 +12,7 @@ public class ErrorActivator : MonoBehaviour
     public int newErrorMaxHP = 5;
     private int currentHP = 0;
 
+    public GameObject PlayerDead;
     public AudioSource PartDestroyedByLaser;
     public AudioSource HitByLaser;
     public AudioSource GameOver;
@@ -41,6 +42,8 @@ public class ErrorActivator : MonoBehaviour
         Time.timeScale = 0;
         gameOver = true;
         StartCoroutine(RestartGame());
+        Instantiate(PlayerDead, transform.position, transform.rotation);        
+        Destroy(gameObject);
     }
 
     private IEnumerator RestartGame()
