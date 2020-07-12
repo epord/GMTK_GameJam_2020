@@ -102,10 +102,18 @@ public class ErrorActivator : MonoBehaviour
             
             currentHP = newErrorMaxHP;
             List<Error> unactiveErrors = new List<Error>();
-        
-            foreach (Error error in errors)
+
+            Error[][] errorsList = { motorErrors, driveErrors, radarErrors, blasterErrors };
+            foreach (Error[] errorList in errorsList)
             {
-                if (!error.isActive) unactiveErrors.Add(error);
+                foreach (Error error in errorList)
+                {
+                    if (!error.isActive)
+                    {
+                        unactiveErrors.Add(error);
+                        break;
+                    }
+                }
             }
 
             if (unactiveErrors.Count <= 0)
@@ -114,10 +122,10 @@ public class ErrorActivator : MonoBehaviour
             }
             else
             {
-                if (unactiveErrors.Count <= 4)
-                {
-                    gameObject.GetComponent<MaterialTintColor>().isColorActive = true;
-                }
+                //if (unactiveErrors.Count <= 4)
+                //{
+                //    gameObject.GetComponent<MaterialTintColor>().isColorActive = true;
+                //}
                 
                 PartDestroyedByLaser.Play();
                 int idx = Random.Range(0, unactiveErrors.Count);
