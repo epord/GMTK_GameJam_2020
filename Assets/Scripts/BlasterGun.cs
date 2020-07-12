@@ -45,7 +45,7 @@ public class BlasterGun : MonoBehaviour
         Vector3 shootDirection = target - firePoint.position;
         float driftAngle = Mathf.Cos(Time.time * 10.0f) * deviation * 2.0f * Mathf.PI / 360.0f;
         float finalAngle = Mathf.Atan2(shootDirection.y, shootDirection.x) + driftAngle;
-        shootDirection = new Vector3(Mathf.Cos(finalAngle), Mathf.Sin(finalAngle), shootDirection.z);
+        shootDirection = new Vector3(Mathf.Cos(finalAngle), Mathf.Sin(finalAngle), 0);
         shootDirection.Normalize();
 
         Quaternion laserRotation = Quaternion.FromToRotation(Vector3.up, shootDirection);
