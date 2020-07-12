@@ -475,7 +475,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87513636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.26, y: -16.5, z: 0}
+  m_LocalPosition: {x: 17.26, y: -16.5, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -924,8 +924,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257203312}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -6.92, z: 6.7396}
-  m_LocalScale: {x: 0.1631975, y: 0.1631975, z: 0.1631975}
+  m_LocalPosition: {x: 0, y: -8.29, z: 6.9361}
+  m_LocalScale: {x: 0.22870497, y: 0.22870497, z: 0.22870497}
   m_Children:
   - {fileID: 1125413558}
   - {fileID: 1187007097}
@@ -1779,7 +1779,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547971536}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.16, z: 6.7396}
+  m_LocalPosition: {x: 0, y: 8.73, z: 6.7396}
   m_LocalScale: {x: 0.16319999, y: 0.16319999, z: 1}
   m_Children: []
   m_Father: {fileID: 2094759198}
@@ -4918,6 +4918,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3996185995814449556, guid: c569e0d867b16354c99b9745e885202c,
+        type: 3}
+      propertyPath: FieldWidth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996185996894573767, guid: c569e0d867b16354c99b9745e885202c,
+        type: 3}
+      propertyPath: FieldWidth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996185997129085157, guid: c569e0d867b16354c99b9745e885202c,
+        type: 3}
+      propertyPath: FieldWidth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996185997257564629, guid: c569e0d867b16354c99b9745e885202c,
+        type: 3}
+      propertyPath: FieldWidth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996185997378141278, guid: c569e0d867b16354c99b9745e885202c,
+        type: 3}
+      propertyPath: FieldWidth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996185997511434129, guid: c569e0d867b16354c99b9745e885202c,
+        type: 3}
+      propertyPath: FieldWidth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3996185997511434135, guid: c569e0d867b16354c99b9745e885202c,
         type: 3}
       propertyPath: EmissionModule.enabled
@@ -4982,6 +5012,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Stafields
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131627170652045551, guid: c569e0d867b16354c99b9745e885202c,
+        type: 3}
+      propertyPath: FieldWidth
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c569e0d867b16354c99b9745e885202c, type: 3}
@@ -5323,7 +5358,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.1
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5415,11 +5450,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -13.8, y: 7.5}
-  - {x: 13.8, y: 7.5}
-  - {x: 13.8, y: -5}
-  - {x: -13.8, y: -5}
-  - {x: -13.8, y: 7.5}
+  - {x: -16.5, y: 8.6}
+  - {x: 16.5, y: 8.6}
+  - {x: 16.5, y: -5.5}
+  - {x: -16.5, y: -5.5}
+  - {x: -16.5, y: 8.6}
 --- !u!114 &2102498703 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4563116780891288036, guid: 9bc6d1115c29e254a974426c06a4ac57,

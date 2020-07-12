@@ -65,6 +65,9 @@ public class Radar : MonoBehaviour
                 {
                     Debug.DrawLine(hit.point, transform.position, Color.green);
 
+                    float distance = Vector2.Distance(transform.position, target.transform.position);
+                    float scale = 0.2f - distance / 350.0f * 0.18f;
+
                     // Add icon
                     GameObject targetIcon = new GameObject("TargetIcon");
 
@@ -74,7 +77,7 @@ public class Radar : MonoBehaviour
                     position.z = -5;
                     targetIcon.transform.position = position - new Vector3(dir.x, dir.y, 0) * 0.7f;
 
-                    targetIcon.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                    targetIcon.transform.localScale = new Vector3(1, 1, 1) * scale;
 
                     SpriteRenderer sr = targetIcon.AddComponent<SpriteRenderer>();
                     sr.sprite = target.icon.sprite;
@@ -90,7 +93,7 @@ public class Radar : MonoBehaviour
                     );
                     arrowIcon.transform.rotation = Quaternion.Euler(new Vector3(0, 0, rotation));
                     arrowIcon.transform.position = hit.point;
-                    arrowIcon.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                    arrowIcon.transform.localScale = new Vector3(1, 1, 1) * scale;
 
                     SpriteRenderer sr2 = arrowIcon.AddComponent<SpriteRenderer>();
                     sr2.sprite = arrow.sprite;
