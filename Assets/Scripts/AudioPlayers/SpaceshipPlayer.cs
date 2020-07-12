@@ -14,9 +14,15 @@ public class SpaceshipPlayer : MonoBehaviour
     public float TURBO_FADE_IN_VOLUME = 0.8f;
 
     private IEnumerator startTurboRoutine;
+    private ErrorActivator errorActivator;
 
     private void Start()
     {
+        errorActivator = GetComponentInParent<ErrorActivator>();
+
+        StartCoroutine(GenerateErrorVoicesList());
+        StartCoroutine(PlayErrorVoices());
+
         turboFadeIn.volume = TURBO_FADE_IN_VOLUME;
         turboFadeIn.Stop();
         turboLoop.volume = BASE_TURBO_LOOP_VOLUME;
@@ -62,4 +68,41 @@ public class SpaceshipPlayer : MonoBehaviour
         laserShoot.pitch = Random.Range(1.0f, 1.70f);
         laserShoot.Play();
     }
+
+    // == ERROR VOICES ===
+    // Assusmes each error has voices in 7 different languages
+
+    private List<AudioSource> voices = new List<AudioSource>();
+
+    private IEnumerator GenerateErrorVoicesList()
+    {
+        while (true)
+        {
+            voices = new List<AudioSource>();
+            for (int i = 0; i < errorActivator.errors.Length; i++)
+            {
+                Error error = errorActivator.errors[i];
+                if (error.isActive)
+                {
+                    voices.AddRange(error.voiceErrors);
+                }
+            }
+            yield return new WaitForSeconds(2.0f);
+        }
+    }
+
+    private IEnumerator PlayErrorVoices()
+    {
+        int i = 0;
+        while (true)
+        {
+            if (i < voices.Count)
+            {
+                voices[i].Play();
+            }
+            i = Random.Range(0, voices.Count);
+            yield return new WaitForSeconds(2.0f);
+        }
+    }
+
 }

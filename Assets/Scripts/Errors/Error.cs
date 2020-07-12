@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class Error : MonoBehaviour
 {
+    public List<AudioSource> voiceErrors = new List<AudioSource>(6);
+
     [HideInInspector]
     public bool isActive = false;
 
