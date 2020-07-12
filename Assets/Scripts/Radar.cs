@@ -9,6 +9,8 @@ public class Radar : MonoBehaviour
     public float cooldown = 30.0f; // time in seconds the player has to wait before using the radar again
     public bool isActive = true;
 
+    public SpriteRenderer arrow;
+
     [HideInInspector]
     public float deviation = 0.0f;
 
@@ -26,16 +28,16 @@ public class Radar : MonoBehaviour
         canActivate = true;
     }
 
-    private void Update()
-    {
+    //private void Update()
+    //{
         // Uncomment to use a key to activate radar
         //if (canActivate && Input.GetButtonDown("Radar"))
         //{
         //    StartCoroutine(ActivateRadar());
         //}
-    }
+    //}
 
-    private void FixedUpdate()
+    private void Update()
     {
         // Remove previous target icons
         foreach (GameObject targetIcon in targetIcons)
@@ -62,21 +64,42 @@ public class Radar : MonoBehaviour
                 if (Vector2.Distance(transform.position, target.transform.position) > hit.distance)
                 {
                     Debug.DrawLine(hit.point, transform.position, Color.green);
-                    SpriteRenderer spriteRenderer = target.icon;
-                    GameObject targetIcon = new GameObject("TargetIcon");
-                    Vector3 position = hit.point;
-                    position.z = -2;
-                    targetIcon.transform.position = position;
-                    SpriteRenderer renderer = target.icon;// targetIcon.AddComponent<SpriteRenderer>();
-                    //renderer.sprite = spriteRenderer.sprite;
-                    renderer.material.color = new Color(
-                        renderer.material.color.r,
-                        renderer.material.color.g,
-                        renderer.material.color.b,
-                        0.5f
-                    );
 
+                    // Add icon
+                    GameObject targetIcon = new GameObject("TargetIcon");
+
+                    Vector2 dir = hit.point - new Vector2(transform.position.x, transform.position.y);
+                    dir.Normalize();
+                    Vector3 position = hit.point;
+                    position.z = -5;
+                    targetIcon.transform.position = position - new Vector3(dir.x, dir.y, 0) * 0.7f;
+
+                    targetIcon.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+
+                    SpriteRenderer sr = targetIcon.AddComponent<SpriteRenderer>();
+                    sr.sprite = target.icon.sprite;
+                    sr.material = target.icon.material;
+
+
+                    // Add arrow
+                    GameObject arrowIcon = new GameObject("Arrow");
+
+                    float rotation = Vector2.SignedAngle(
+                        Vector2.up,
+                        hit.point - new Vector2(transform.position.x, transform.position.y)
+                    );
+                    arrowIcon.transform.rotation = Quaternion.Euler(new Vector3(0, 0, rotation));
+                    arrowIcon.transform.position = hit.point;
+                    arrowIcon.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+
+                    SpriteRenderer sr2 = arrowIcon.AddComponent<SpriteRenderer>();
+                    sr2.sprite = arrow.sprite;
+                    sr2.material = arrow.sharedMaterial;
+
+
+                    // Add icon and arrow
                     targetIcons.Add(targetIcon);
+                    targetIcons.Add(arrowIcon);
                 }
             }
         }
