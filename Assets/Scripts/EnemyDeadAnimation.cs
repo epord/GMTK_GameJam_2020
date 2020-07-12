@@ -57,8 +57,7 @@ public class EnemyDeadAnimation : MonoBehaviour
 
     private IEnumerator RestartGame()
     {
-        yield return new  WaitForSecondsRealtime(6.0f);
-        Time.timeScale = 1.0f;
+        yield return new  WaitForSecondsRealtime(4.3f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
   

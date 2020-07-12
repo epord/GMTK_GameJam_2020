@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public Planet[] planets;
     private bool won = false;
+    private bool gameStarted = false;
 
     private IEnumerator Win()
     {
@@ -16,6 +17,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.anyKeyDown && !gameStarted)
+        {
+            Time.timeScale = 1.0f;
+            gameStarted = true;
+        }
         if (won) return;
         bool areAllPlanetsVisited = true;
         foreach (Planet planet in planets)
