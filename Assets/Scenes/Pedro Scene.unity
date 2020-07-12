@@ -1746,7 +1746,7 @@ PrefabInstance:
     - target: {fileID: 2677042439664083182, guid: 1418c259a945d6c4fb222fddf149e14e,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1418c259a945d6c4fb222fddf149e14e, type: 3}
@@ -2788,6 +2788,11 @@ PrefabInstance:
       propertyPath: targets.Array.data[8]
       value: 
       objectReference: {fileID: 354387963}
+    - target: {fileID: 1803957663, guid: 9862d215d4c310c43bde9f51d86da9bc, type: 3}
+      propertyPath: arrow
+      value: 
+      objectReference: {fileID: 2533393367360813827, guid: bc5c6e76cd63d6d429ef9a3d21e91434,
+        type: 3}
     - target: {fileID: 2060851191997956008, guid: 9862d215d4c310c43bde9f51d86da9bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5196,8 +5201,8 @@ EdgeCollider2D:
   m_Points:
   - {x: -13.8, y: 7.5}
   - {x: 13.8, y: 7.5}
-  - {x: 13.8, y: -4}
-  - {x: -13.8, y: -4}
+  - {x: 13.8, y: -5.4}
+  - {x: -13.8, y: -5.4}
   - {x: -13.8, y: 7.5}
 --- !u!114 &2102498703 stripped
 MonoBehaviour:
