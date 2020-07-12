@@ -7,11 +7,15 @@ public class Planet : MonoBehaviour
     public SpriteRenderer unvisitedSprite;
     public SpriteRenderer visitedSprite;
 
+    private AudioSource repairSound;
+
     [HideInInspector]
     public bool isVisited = false;
 
     private void Start()
     {
+        repairSound = GetComponent<AudioSource>();
+
         unvisitedSprite.enabled = true;
         visitedSprite.enabled = false;
     }
@@ -28,7 +32,7 @@ public class Planet : MonoBehaviour
                 SpriteRenderer renderer = GetComponent<SpriteRenderer>();
                 unvisitedSprite.enabled = false;
                 visitedSprite.enabled = true;
-
+                repairSound.Play();
             }
         }
     }
