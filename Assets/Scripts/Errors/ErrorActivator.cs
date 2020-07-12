@@ -66,7 +66,7 @@ public class ErrorActivator : MonoBehaviour
         errors.AddRange(driveErrors);
         errors.AddRange(radarErrors);
         errors.AddRange(blasterErrors);
-        currentHP = newErrorMaxHP;
+        currentHP = 1;
         StartCoroutine(RandomBreak());
     }
 
@@ -78,6 +78,7 @@ public class ErrorActivator : MonoBehaviour
         foreach (Error error in blasterErrors) error.Deactivate();
 
         gameObject.GetComponent<MaterialTintColor>().isColorActive = false;
+        currentHP = 1;
     }
 
     public void Lose()
