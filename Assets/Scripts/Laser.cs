@@ -38,7 +38,7 @@ public class Laser : MonoBehaviour
         {
             playerError.TakeHit(damage);
         }
-        Instantiate(impactEffect, transform.position, transform.rotation);
+        /*Instantiate(impactEffect, transform.position, transform.rotation);*/
         Destroy(gameObject);
     }
     
