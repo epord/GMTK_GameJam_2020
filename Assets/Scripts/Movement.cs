@@ -11,6 +11,10 @@ public class Movement : MonoBehaviour
 
     public float angleSpeed = 1.0f; // degrees per frame
 
+    public SpriteRenderer leftFire;
+    public SpriteRenderer centerFire;
+    public SpriteRenderer rightFire;
+
     [HideInInspector]
     public float speed;
 
@@ -27,12 +31,14 @@ public class Movement : MonoBehaviour
 
     public void StartTurbo()
     {
+        centerFire.enabled = true;
         audioPlayer.StartTurbo();
         speed = TURBO_SPEED;
     }
 
     public void StopTurbo()
     {
+        centerFire.enabled = false;
         audioPlayer.StopTurbo();
         speed = NORMAL_SPEED;
     }
@@ -42,14 +48,19 @@ public class Movement : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, angle);
         transform.Translate(Vector2.up * speed * Time.deltaTime);
 
+        leftFire.enabled = true;
+        rightFire.enabled = true;
+
         if (Input.GetButton("Left"))
         {
+            leftFire.enabled = false;
             angle = (angle + angleSpeed + 360) % 360;
         }
 
 
         if (Input.GetButton("Right"))
         {
+            rightFire.enabled = false;
             angle = (angle - angleSpeed + 360) % 360;
         }
 
