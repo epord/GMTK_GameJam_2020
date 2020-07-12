@@ -1298,6 +1298,11 @@ PrefabInstance:
       propertyPath: planetText
       value: 
       objectReference: {fileID: 547971536}
+    - target: {fileID: 4563116780891288036, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 2122711257}
     - target: {fileID: 4563116780891288037, guid: 9bc6d1115c29e254a974426c06a4ac57,
         type: 3}
       propertyPath: m_Name
@@ -1512,6 +1517,11 @@ PrefabInstance:
       propertyPath: planetText
       value: 
       objectReference: {fileID: 547971536}
+    - target: {fileID: 4563116780891288036, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 2122711257}
     - target: {fileID: 4563116780891288037, guid: 9bc6d1115c29e254a974426c06a4ac57,
         type: 3}
       propertyPath: m_Name
@@ -1855,7 +1865,7 @@ PrefabInstance:
     - target: {fileID: 2677042439664083182, guid: 1418c259a945d6c4fb222fddf149e14e,
         type: 3}
       propertyPath: enemyDelayMax
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2677042439664083182, guid: 1418c259a945d6c4fb222fddf149e14e,
         type: 3}
@@ -1865,7 +1875,17 @@ PrefabInstance:
     - target: {fileID: 2677042439664083182, guid: 1418c259a945d6c4fb222fddf149e14e,
         type: 3}
       propertyPath: Enemies.Array.data[1].spawnProbability
-      value: 0.3
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677042439664083182, guid: 1418c259a945d6c4fb222fddf149e14e,
+        type: 3}
+      propertyPath: probEnemyInFront
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677042439664083182, guid: 1418c259a945d6c4fb222fddf149e14e,
+        type: 3}
+      propertyPath: Enemies.Array.data[0].spawnProbability
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1418c259a945d6c4fb222fddf149e14e, type: 3}
@@ -1976,6 +1996,11 @@ PrefabInstance:
       propertyPath: planetText
       value: 
       objectReference: {fileID: 547971536}
+    - target: {fileID: 4563116780891288036, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 2122711257}
     - target: {fileID: 4563116780891288037, guid: 9bc6d1115c29e254a974426c06a4ac57,
         type: 3}
       propertyPath: m_Name
@@ -2862,7 +2887,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1209938666, guid: 9862d215d4c310c43bde9f51d86da9bc, type: 3}
       propertyPath: cooldown
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1803957656, guid: 9862d215d4c310c43bde9f51d86da9bc, type: 3}
       propertyPath: minDriftAmount
@@ -3216,6 +3241,11 @@ PrefabInstance:
       propertyPath: planetText
       value: 
       objectReference: {fileID: 547971536}
+    - target: {fileID: 4563116780891288036, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 2122711257}
     - target: {fileID: 4563116780891288037, guid: 9bc6d1115c29e254a974426c06a4ac57,
         type: 3}
       propertyPath: m_Name
@@ -3916,6 +3946,11 @@ PrefabInstance:
       propertyPath: planetText
       value: 
       objectReference: {fileID: 547971536}
+    - target: {fileID: 4563116780891288036, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 2122711257}
     - target: {fileID: 4563116780891288037, guid: 9bc6d1115c29e254a974426c06a4ac57,
         type: 3}
       propertyPath: m_Name
@@ -4031,6 +4066,11 @@ PrefabInstance:
       propertyPath: planetText
       value: 
       objectReference: {fileID: 547971536}
+    - target: {fileID: 4563116780891288036, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 2122711257}
     - target: {fileID: 4563116780891288037, guid: 9bc6d1115c29e254a974426c06a4ac57,
         type: 3}
       propertyPath: m_Name
@@ -4612,6 +4652,11 @@ PrefabInstance:
       propertyPath: planetText
       value: 
       objectReference: {fileID: 547971536}
+    - target: {fileID: 4563116780891288036, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 2122711257}
     - target: {fileID: 4563116780891288037, guid: 9bc6d1115c29e254a974426c06a4ac57,
         type: 3}
       propertyPath: m_Name
@@ -5043,6 +5088,11 @@ PrefabInstance:
       propertyPath: planetText
       value: 
       objectReference: {fileID: 547971536}
+    - target: {fileID: 4563116780891288036, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 2122711257}
     - target: {fileID: 4563116780891288037, guid: 9bc6d1115c29e254a974426c06a4ac57,
         type: 3}
       propertyPath: m_Name
@@ -5378,6 +5428,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cedae01b3ea0db43a29ec03a6c86957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2122711257 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2677042439664083180, guid: 1418c259a945d6c4fb222fddf149e14e,
+    type: 3}
+  m_PrefabInstance: {fileID: 567368821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2143425350
 GameObject:
   m_ObjectHideFlags: 0
@@ -5680,6 +5736,11 @@ PrefabInstance:
       propertyPath: planetText
       value: 
       objectReference: {fileID: 547971536}
+    - target: {fileID: 4563116780891288036, guid: 9bc6d1115c29e254a974426c06a4ac57,
+        type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 2122711257}
     - target: {fileID: 4563116780891288037, guid: 9bc6d1115c29e254a974426c06a4ac57,
         type: 3}
       propertyPath: m_Name
