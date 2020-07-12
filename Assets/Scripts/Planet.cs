@@ -6,7 +6,7 @@ public class Planet : MonoBehaviour
 {
     public Shader visitedShader;
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool isVisited = false;
 
     private void OnTriggerEnter2D(Collider2D collider)
