@@ -6,7 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class ErrorActivator : MonoBehaviour
 {
-    public Error[] errors;
+    public Error[] motorErrors = new Error[2];
+    public Error[] driveErrors = new Error[2];
+    public Error[] radarErrors = new Error[2];
+    public Error[] blasterErrors = new Error[2];
+
+    [HideInInspector]
+    public List<Error> errors = new List<Error>();
+
     public float minTimeToBreak = 5.0f;
     public float maxTimeToBreak = 20.0f;
     public int newErrorMaxHP = 5;
@@ -18,20 +25,58 @@ public class ErrorActivator : MonoBehaviour
     public AudioSource GameOver;
     private bool gameOver = false;
 
-    
+    [HideInInspector]
+    public int motorDamageLevel = 0;
+    public int driveDamageLevel = 0;
+    public int radarDamageLevel = 0;
+    public int blasterDamageLevel = 0;
+
+    private void Update()
+    {
+        motorDamageLevel = 0;
+        driveDamageLevel = 0;
+        radarDamageLevel = 0;
+        blasterDamageLevel = 0;
+
+        foreach (Error error in motorErrors)
+        {
+            if (error.isActive) motorDamageLevel++;
+        }
+
+        foreach (Error error in driveErrors)
+        {
+            if (error.isActive) driveDamageLevel++;
+        }
+
+        foreach (Error error in radarErrors)
+        {
+            if (error.isActive) radarDamageLevel++;
+        }
+
+        foreach (Error error in blasterErrors)
+        {
+            if (error.isActive) blasterDamageLevel++;
+        }
+
+    }
+
     private void Start()
     {
+        errors.AddRange(motorErrors);
+        errors.AddRange(driveErrors);
+        errors.AddRange(radarErrors);
+        errors.AddRange(blasterErrors);
         currentHP = newErrorMaxHP;
         StartCoroutine(RandomBreak());
     }
 
     public void FixAll()
     {
-        foreach (Error error in errors)
-        {
-            error.Deactivate();
-        }
-      
+        foreach (Error error in motorErrors) error.Deactivate();
+        foreach (Error error in driveErrors) error.Deactivate();
+        foreach (Error error in radarErrors) error.Deactivate();
+        foreach (Error error in blasterErrors) error.Deactivate();
+
         gameObject.GetComponent<MaterialTintColor>().isColorActive = false;
     }
 
@@ -101,68 +146,29 @@ public class ErrorActivator : MonoBehaviour
             yield return new WaitForSeconds(wait);
 
             List<Error> unactiveErrors = new List<Error>();
-            foreach (Error error in errors)
+            Error[][] errorsList = { motorErrors, driveErrors, radarErrors, blasterErrors };
+            foreach (Error[] errorList in errorsList)
             {
-                if (!error.isActive) unactiveErrors.Add(error);
+                foreach (Error error in errorList)
+                {
+                    if (!error.isActive)
+                    {
+                        unactiveErrors.Add(error);
+                        break;
+                    }
+                }
             }
 
             int idx = Random.Range(0, unactiveErrors.Count);
             if (idx < unactiveErrors.Count)
             {
                 unactiveErrors[idx].Activate();
-                Debug.Log("Activating " + unactiveErrors[idx].GetType());
             }
             if (unactiveErrors.Count <= 4)
             {
                 gameObject.GetComponent<MaterialTintColor>().isColorActive = true;
             }
 
-        }
-    }
-
-    void Update()
-    {
-        
-
-        if (Input.GetKeyDown("1"))
-        {
-            errors[0].Toggle();
-        }
-        if (Input.GetKeyDown("2"))
-        {
-            errors[1].Toggle();
-        }
-        if (Input.GetKeyDown("3"))
-        {
-            errors[2].Toggle();
-        }
-        if (Input.GetKeyDown("4"))
-        {
-            errors[3].Toggle();
-        }
-        if (Input.GetKeyDown("5"))
-        {
-            errors[4].Toggle();
-        }
-        if (Input.GetKeyDown("6"))
-        {
-            errors[5].Toggle();
-        }
-        if (Input.GetKeyDown("7"))
-        {
-            errors[6].Toggle();
-        }
-        if (Input.GetKeyDown("8"))
-        {
-            errors[7].Toggle();
-        }
-        if (Input.GetKeyDown("9"))
-        {
-            errors[8].Toggle();
-        }
-        if (Input.GetKeyDown("0"))
-        {
-            errors[9].Toggle();
         }
     }
 }

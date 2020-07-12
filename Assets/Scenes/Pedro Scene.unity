@@ -1128,6 +1128,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1803957653}
+    - target: {fileID: 2677042439664083182, guid: 1418c259a945d6c4fb222fddf149e14e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1418c259a945d6c4fb222fddf149e14e, type: 3}
 --- !u!1001 &582456001
@@ -1787,9 +1792,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1209938666, guid: 9862d215d4c310c43bde9f51d86da9bc, type: 3}
-      propertyPath: cooldown
+    - target: {fileID: 1803957656, guid: 9862d215d4c310c43bde9f51d86da9bc, type: 3}
+      propertyPath: minDriftAmount
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803957656, guid: 9862d215d4c310c43bde9f51d86da9bc, type: 3}
+      propertyPath: maxDriftAmount
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803957657, guid: 9862d215d4c310c43bde9f51d86da9bc, type: 3}
+      propertyPath: maxTurboTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1803957663, guid: 9862d215d4c310c43bde9f51d86da9bc, type: 3}
       propertyPath: targets.Array.size
@@ -1896,15 +1909,25 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2060851191997956014, guid: 9862d215d4c310c43bde9f51d86da9bc,
+    - target: {fileID: 4736326902014730185, guid: 9862d215d4c310c43bde9f51d86da9bc,
         type: 3}
-      propertyPath: TURBO_SPEED
-      value: 6
+      propertyPath: minTurboTime
+      value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 2060851191997956014, guid: 9862d215d4c310c43bde9f51d86da9bc,
+    - target: {fileID: 4736326902014730185, guid: 9862d215d4c310c43bde9f51d86da9bc,
         type: 3}
-      propertyPath: NORMAL_SPEED
-      value: 4
+      propertyPath: maxTurboTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384420677083143394, guid: 9862d215d4c310c43bde9f51d86da9bc,
+        type: 3}
+      propertyPath: maxDriftAmount
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384420677083143394, guid: 9862d215d4c310c43bde9f51d86da9bc,
+        type: 3}
+      propertyPath: minDriftAmount
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9862d215d4c310c43bde9f51d86da9bc, type: 3}
