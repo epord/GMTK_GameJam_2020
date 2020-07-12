@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 3
-  deathEffect: {fileID: 6804278827846748458, guid: 423fb8c7492ed3c439688868761d6aa1,
+  deathEffect: {fileID: 1538968279277475785, guid: 11f913a3814d888498e70e161c8b1e81,
     type: 3}
 --- !u!114 &5199212521950674457
 MonoBehaviour:
