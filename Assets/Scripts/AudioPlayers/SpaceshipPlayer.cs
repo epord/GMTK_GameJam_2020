@@ -79,7 +79,7 @@ public class SpaceshipPlayer : MonoBehaviour
         while (true)
         {
             voices = new List<AudioSource>();
-            for (int i = 0; i < errorActivator.errors.Length; i++)
+            for (int i = 0; i < errorActivator.errors.Count; i++)
             {
                 Error error = errorActivator.errors[i];
                 if (error.isActive)

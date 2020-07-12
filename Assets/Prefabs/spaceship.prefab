@@ -2264,7 +2264,9 @@ GameObject:
   - component: {fileID: 1803957663}
   - component: {fileID: 1803957658}
   - component: {fileID: 1803957657}
+  - component: {fileID: 4736326902014730185}
   - component: {fileID: 1803957656}
+  - component: {fileID: 6384420677083143394}
   - component: {fileID: 1803957655}
   - component: {fileID: 1803957654}
   - component: {fileID: 7590865182121355284}
@@ -2360,8 +2362,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SLOW_SPEED: 0.1
-  NORMAL_SPEED: 1
-  TURBO_SPEED: 3
+  NORMAL_SPEED: 4
+  TURBO_SPEED: 6
   angleSpeed: 1
   leftFire: {fileID: 4779118424718249971}
   centerFire: {fileID: 5881561249896240070}
@@ -2425,6 +2427,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943f5978fa498b94fb86d9d093a951ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  motorErrors:
+  - {fileID: 1803957657}
+  - {fileID: 4736326902014730185}
+  driveErrors:
+  - {fileID: 1803957656}
+  - {fileID: 6384420677083143394}
+  radarErrors:
+  - {fileID: 1803957655}
+  - {fileID: 1803957654}
+  blasterErrors:
+  - {fileID: 7590865182121355284}
+  - {fileID: 8722328768351919216}
   errors:
   - {fileID: 1803957657}
   - {fileID: 1803957656}
@@ -2433,7 +2447,7 @@ MonoBehaviour:
   - {fileID: 7590865182121355284}
   - {fileID: 8722328768351919216}
   minTimeToBreak: 5
-  maxTimeToBreak: 20
+  maxTimeToBreak: 5
   newErrorMaxHP: 5
   PartDestroyedByLaser: {fileID: 1448581107}
   HitByLaser: {fileID: 1365406252}
@@ -2461,6 +2475,22 @@ MonoBehaviour:
   isActive: 0
   minTurboTime: 0.5
   maxTurboTime: 2
+--- !u!114 &4736326902014730185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060851191997956013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0280f066321da6240bb31ef87a2897b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voiceErrors: []
+  isActive: 0
+  minTurboTime: 0.2
+  maxTurboTime: 1.4
 --- !u!114 &1803957656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2483,6 +2513,22 @@ MonoBehaviour:
   - {fileID: 8222142560042469980}
   isActive: 0
   minDriftAmount: 0.2
+  maxDriftAmount: 1
+--- !u!114 &6384420677083143394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060851191997956013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ab5b620d430ec4698476011057be54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voiceErrors: []
+  isActive: 0
+  minDriftAmount: 0.5
   maxDriftAmount: 1
 --- !u!114 &1803957655
 MonoBehaviour:
