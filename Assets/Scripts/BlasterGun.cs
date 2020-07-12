@@ -43,7 +43,7 @@ public class BlasterGun : MonoBehaviour
         // Update is called once per frame
         void Update()
     {
-        if (canShoot && Input.GetMouseButtonDown(1))
+        if (canShoot && (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)))
         {
             StartCoroutine(Cooldown());
             StartCoroutine(Shoot());
